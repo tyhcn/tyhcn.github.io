@@ -2,88 +2,101 @@
 /* CSS Document */
 @font-face {
 	font-family: '千图小兔体';
-	src: url('千图小兔体.ttf') format('truetype');
+	src: url('千图小兔体.ttf') format('truetype'); /* Ensure 千图小兔体.ttf is in this css folder or adjust path */
 }
 *{
 	padding: 0px;
 	margin: 0px;
+	box-sizing: border-box; /* Added for better layout control */
 }
-.img1{
-	width: 159px;
-	height: 160px;
+
+/* Responsive styles for images/icons */
+.img1, .img2, .img3, .img4 {
 	cursor: pointer;
 	position: absolute;
-    right:100px;
-	bottom:40px;
-	repeat: no-repeat
+	/* 'repeat: no-repeat' was invalid here and removed */
+}
+
+.img1 img, .img2 img, .img3 img, .img4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures image fits within container, maintains aspect ratio */
+}
+
+.img1{
+	width: 10.3516vw; /* (159/1536)*100 */
+	height: calc(10.3516vw * 160 / 159); /* Maintain aspect ratio, approx 10.4167vw */
+    right: 6.5104vw; /* (100/1536)*100 */
+	bottom: 4.6296vh; /* (40/864)*100 */
 }
 .img2{
-	width: 150px;
-	height: 150px;
-	cursor: pointer;
-	position: absolute;
-    left:180px;
-	bottom:80px;
-	repeat: no-repeat
+	width: 9.7656vw; /* (150/1536)*100 */
+	height: 9.7656vw; /* Maintain 1:1 aspect ratio */
+    left: 11.71875vw; /* (180/1536)*100 */
+	bottom: 9.2593vh; /* (80/864)*100 */
 }
 .img3{
-	width: 130px;
-	height: 45px;
-	cursor: pointer;
-	position: absolute;
-    left:80px;
-	bottom:110px;
-	repeat: no-repeat
+	width: 8.4635vw; /* (130/1536)*100 */
+	height: calc(8.4635vw * 45 / 130); /* Maintain aspect ratio, approx 2.9297vw */
+    left: 5.2083vw; /* (80/1536)*100 */
+	bottom: 12.7315vh; /* (110/864)*100 */
 }
 .img4{
-	width: 183px;
-	height: 134px;
-	cursor: pointer;
-	position: absolute;
-    left:310px;
-	bottom:50px;
-	repeat: no-repeat
+	width: 11.9141vw; /* (183/1536)*100 */
+	height: calc(11.9141vw * 134 / 183); /* Maintain aspect ratio, approx 8.7301vw */
+    left: 20.1823vw; /* (310/1536)*100 */
+	bottom: 5.787vh; /* (50/864)*100 */
 }
-.iframe1{
+
+/* Responsive styles for iframes */
+.iframe1, .iframe2, .iframe3 {
 	position: absolute;
-	left:180px;
-	top:110px;
-	repeat:repeat;
+	/* 'repeat: repeat' was invalid here and removed */
+}
+
+.iframe1{
+	left: 11.71875vw; /* (180/1536)*100 */
+	top: 12.7315vh; /* (110/864)*100 */
+	width: 35.8073vw; /* (550/1536)*100 */
+	height: 69.4444vh; /* (600/864)*100 */
 }
 .iframe2{
-    position: absolute;
-	right:80px;
-	bottom:40px;
-	repeat: repeat;
+    right: 5.2083vw; /* (80/1536)*100 */
+	bottom: 4.6296vh; /* (40/864)*100 */
+	/* Define width and height if this iframe is used, e.g.: */
+    /* width: 25vw; */
+    /* height: 35vh; */
 }
 .iframe3{
-    position: absolute;
-	right:220px;
-	bottom:40px;
-	repeat: repeat;
+    right: 14.3229vw; /* (220/1536)*100 */
+	bottom: 4.6296vh; /* (40/864)*100 */
+	/* Define width and height if this iframe is used */
 }
+
+/* Responsive styles for tubiao */
 .tubiao{
-	width: 99px;
-	height: 99px;
+	width: 6.4453vw; /* (99/1536)*100 */
+	height: 6.4453vw; /* To keep it square */
 	cursor: pointer;
 	position: absolute;
-	left:10px;
-	top:10px;
-	repeat: no-repeat;
+	left: 0.651vw; /* (10/1536)*100 */
+	top: 1.1574vh; /* (10/864)*100 */
 }
 .tubiao1,.tubiao2{
-	width: 99px;
-	height: 99px;
+	width: 75%; /* Fill parent .tubiao */
+	height: 75%; /* Fill parent .tubiao */
 	position: absolute;
-	left:10px;
-	top:10px;
-	repeat: no-repeat;
+	left: 5vw;
+	top: 5vh;
+	background-size: contain; /* Ensure background image fits */
 }
 .tubiao1{
-	background: url(../img/4.png) 0px 0px no-repeat;
+	background: url(../img/4.webp) 0px 0px no-repeat; /* Ensure path to img folder is correct from css folder */
+    background-size: contain;
 }
 .tubiao2{
-	background: url(../img/5.png) 0px 0px no-repeat;
+	background: url(../img/5.webp) 0px 0px no-repeat; /* Ensure path to img folder is correct from css folder */
+    background-size: contain;
 	animation: TuBiao 3s linear infinite;
 }
 @keyframes TuBiao{

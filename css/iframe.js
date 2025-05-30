@@ -23,3 +23,4 @@ img1.onclick=function()
 		img4.style="display:none";
 		}
 	};
+//©Copyright tyhcn 2023

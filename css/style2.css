@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+	font-family: '千图小兔体';
+	src: url('千图小兔体.ttf') format('truetype');
+}
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.img1{
+	width: 159px;
+	height: 160px;
+	cursor: pointer;
+	position: absolute;
+    right:100px;
+	bottom:40px;
+	repeat: no-repeat
+}
+.img2{
+	width: 150px;
+	height: 150px;
+	cursor: pointer;
+	position: absolute;
+    left:180px;
+	bottom:80px;
+	repeat: no-repeat
+}
+.img3{
+	width: 130px;
+	height: 45px;
+	cursor: pointer;
+	position: absolute;
+    left:80px;
+	bottom:110px;
+	repeat: no-repeat
+}
+.img4{
+	width: 183px;
+	height: 134px;
+	cursor: pointer;
+	position: absolute;
+    left:310px;
+	bottom:50px;
+	repeat: no-repeat
+}
+.iframe1{
+	position: absolute;
+	left:180px;
+	top:110px;
+	repeat:repeat;
+}
+.iframe2{
+    position: absolute;
+	right:80px;
+	bottom:40px;
+	repeat: repeat;
+}
+.iframe3{
+    position: absolute;
+	right:220px;
+	bottom:40px;
+	repeat: repeat;
+}
+.tubiao{
+	width: 99px;
+	height: 99px;
+	cursor: pointer;
+	position: absolute;
+	left:10px;
+	top:10px;
+	repeat: no-repeat;
+}
+.tubiao1,.tubiao2{
+	width: 99px;
+	height: 99px;
+	position: absolute;
+	left:10px;
+	top:10px;
+	repeat: no-repeat;
+}
+.tubiao1{
+	background: url(../img/4.png) 0px 0px no-repeat;
+}
+.tubiao2{
+	background: url(../img/5.png) 0px 0px no-repeat;
+	animation: TuBiao 3s linear infinite;
+}
+@keyframes TuBiao{
+	0%{transform: rotate(0deg);}
+	50%{transform: rotate(180deg);}
+	100%{transform: rotate(360deg);}
+}

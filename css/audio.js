@@ -18,3 +18,4 @@ tb.onclick=function()
 			music.play();
 		}
 	};
+//©Copyright tyhcn 2023
